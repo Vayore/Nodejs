@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= title %></p>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>ID</th>
+                        <th>Usermaster_name</th>
+                        <th>User_detail_firstname</th>
+                        <th>User_detail_lastname</th>
+                        <th>Id_gender</th>
+                        <th>Createddate</th>
+                        <th>usermaster_isactive</th>
+                    </tr>
+                    <%
+                    if(retrieveData.length > 0)
+                    {
+                    retrieveData.forEach(function(data){
+                    %>
+                    <tr>
+                        <td><%= data.ID %></td>
+                        <td><%= data.Usermaster_name %></td>
+                        <td><%= data.User_detail_firstname %></td>
+                        <td><%= data.User_detail_lastname %></td>
+                        <td><%= data.Id_gender %></td>
+                        <td><%= data.Createddate %></td>
+                        <td><%= data.usermaster_isactive %></td>
+                        <td></td>
+                    </tr>
+                    <%
+                        });
+                    }
+                    else
+                    {
+                    %>
+                    <tr>
+                        <td colspan="5">No Data Found</td>
+                    </tr>
+                    <%
+                    }
+                    %>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

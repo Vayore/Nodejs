@@ -1,0 +1,17 @@
+
+{
+    "SQL": {
+        "name":"SQLEXPRESS",
+        "server":"PR-JCREW-03\\SQLEXPRESS",
+        "port":"1433",
+        "user":"Vaks",
+        "password":"1@3$",
+        "database":"DevTest",
+        "requestTimeout":30,
+        "pool":{
+            "max":10,
+            "min":1,
+            "idleTimeoutMillis":360
+        }
+    }
+}
